@@ -27,3 +27,5 @@ def guardar_dado(dados_rolados, dados_no_estoque, dado_para_guardar):
 dados_rolados = [6, 1, 6, 4]
 dados_no_estoque = [2]
 dado_para_guardar = 2
+
+kkkkkkkkkkkkkkkkkkkk
