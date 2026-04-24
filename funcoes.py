@@ -24,6 +24,9 @@ def guardar_dado(dados_rolados, dados_no_estoque, dado_para_guardar):
 
     return [dados_rolados_final, dados_no_estoque]    
 
-dados_rolados = [6, 1, 6, 4]
-dados_no_estoque = [2]
-dado_para_guardar = 2
+def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
+    if dado_para_remover < len(dados_no_estoque):
+        dados_rolados.append(dados_no_estoque[dado_para_remover])   
+        del dados_no_estoque[dado_para_remover]
+    
+    return [dados_rolados, dados_no_estoque]
