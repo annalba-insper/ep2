@@ -32,13 +32,19 @@ def remover_dado(dados_rolados, dados_no_estoque, dado_para_remover):
     return [dados_rolados, dados_no_estoque]
 
 def calcula_pontos_regra_simples(dados_rolados):
-    dicionario_pontos = {}
+    dicionario_pontos_simples = {}
 
     for numero in range(1,7):
-        if numero not in dicionario_pontos:
-            dicionario_pontos[numero] = 0
+        if numero not in dicionario_pontos_simples:
+            dicionario_pontos_simples[numero] = 0
 
     for i in range(0, len(dados_rolados)):
-        dicionario_pontos[dados_rolados[i]] += dados_rolados[i]
+        dicionario_pontos_simples[dados_rolados[i]] += dados_rolados[i]
 
-    return dicionario_pontos
+    return dicionario_pontos_simples
+
+def calcula_pontos_soma(dados_rolados):
+    soma = 0
+    for dado in dados_rolados:
+        soma += dado
+    return soma
