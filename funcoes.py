@@ -86,3 +86,28 @@ def calcula_pontos_full_house(dados_rolados):
                 soma += num*valor
 
     return soma
+def calcula_pontos_quadra(dados):
+    i = 1
+    
+    while i <= 6:  
+        contador = 0
+        j = 0
+        
+        while j < len(dados):  
+            if dados[j] == i:
+                contador += 1
+            j += 1
+        
+        if contador >= 4:  
+            soma = 0
+            k = 0
+            
+            while k < len(dados):  
+                soma += dados[k]
+                k += 1
+                
+            return soma
+        
+        i += 1
+    
+    return 0
